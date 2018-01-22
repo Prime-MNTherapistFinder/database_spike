@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Database Spike</title>
+    <script src="vendors/angular.min.js"></script>
+    <script src="scripts/client.js"></script>
+    <script src="scripts/controllers/spike.controller.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment-with-locales.js"></script>
+    <script src="//cdn.rawgit.com/indrimuska/angular-moment-picker/master/dist/angular-moment-picker.min.js"></script>
+    <link href="//cdn.rawgit.com/indrimuska/angular-moment-picker/master/dist/angular-moment-picker.min.css" rel="stylesheet">
+    <link href="//cdn.rawgit.com/indrimuska/angular-moment-picker/master/dist/themes/material-ui.min.css" rel="stylesheet">
+</head>
+
+<body ng-app="myApp" ng-controller="SpikeController as vm">
+    
+        <div class="form-group">
+                <label></label>
+                <div class="form-control"
+                     moment-picker="vm.stringDate"
+                     format="YYYY-MM-DD"
+                     locale="en"
+                     ng-model="vm.momentDate">
+                  <a class="pull-right"
+                     ng-if="vm.stringDate"
+                     ng-click="vm.momentDate = undefined">
+                    &times;
+                  </a>
+                  <span ng-class="{'text-muted': !vm.stringDate}">
+                    {{ vm.stringDate || 'Enter Date...' }}
+                  </span>
+                </div>
+            
+                <div class="form-group">
+                    <button class="btn btn-info btn-sm"
+                            ng-click="vm.setToday('vm.momentDate')">
+                      Set to today
+                    </button>
+                    <button class="btn btn-info btn-sm"
+                            ng-disabled="!vm.stringDate"
+                            ng-click="vm.addDays(vm.momentDate, 2)">
+                      Add 2 days
+                    </button>
+                  </div>
+
+    
+</body>
+</html>
