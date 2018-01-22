@@ -4,10 +4,9 @@ app.controller('SpikeController', function($http){
 
     self.message = 'wecome!';    
     
-  
 
-self.setToday = function (which) {
-    vm[which].momentDate = moment();
+self.setToday = function () {
+    self.momentDate = moment();
   };
   self.addDays = function (momentObject, days) {
     momentObject.add(days, 'day');
