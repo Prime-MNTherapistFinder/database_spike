@@ -1,0 +1,22 @@
+{
+  "name": "database_spike",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Prime-MNTherapistFinder/database_spike.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Prime-MNTherapistFinder/database_spike/issues"
+  },
+  "homepage": "https://github.com/Prime-MNTherapistFinder/database_spike#readme",
+  "dependencies": {
+    "angular": "^1.6.8"
+  }
+}
